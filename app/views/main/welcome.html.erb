@@ -5,7 +5,7 @@
           <%= image_tag "pennant_logo_large.png", id: "pennant_logo", class: "pngimg" %>
           <div id="every_team_text" >
 <!--           Every team. Every game. Every play. 1952 to today.
--->Kaline’s single. Gibby’s homer. Verlander’s no-hitter.
+-->Kaline’s single. Gibby’s homer. Verlander’s no-hitter.<br>
 Every Tigers moment from 1952 to today.          </div>
         
                 <div id="divider"   >
@@ -28,12 +28,9 @@ Every Tigers moment from 1952 to today.          </div>
     <div id="iphone"  > <%= image_tag "iphone_hand.png" %> </div>
     <div id="iphone-overlay">
       <div id="image_carousel">
-        <%= image_tag "default_tigers.jpeg", class: "iphone-overlay-image" %>
-        <%= image_tag "default_tigers.jpeg", class: "iphone-overlay-image" %>
-        <%= image_tag "default_tigers.jpeg", class: "iphone-overlay-image" %>
-        <%= image_tag "default_tigers.jpeg", class: "iphone-overlay-image" %>
-        <%= image_tag "default_tigers.jpeg", class: "iphone-overlay-image" %>
-        <%= image_tag "default_tigers.jpeg", class: "iphone-overlay-image" %>
+        <%= @overlay_images.each  do |x|  %>
+        <%= image_tag x, class: "iphone-overlay-image" %>
+        <% end %>
       </div>
 
     </div>
@@ -128,14 +125,38 @@ Every Tigers moment from 1952 to today.          </div>
       
 
     });
+    $(".topps_video").fancybox({
+          'padding'   : 4,
+          'autoScale'   : false,
+          'transitionIn'  : 'none',
+          'transitionOut' : 'none',
+          // 'title'     : this.title,
+          'width'       : 700,
+          'height'    : 500,
+          'type'      : 'iframe',
+          'autoplay'    : 1,
+          'href'      : this.href
+     });
 
+    setTimeout(function() {
+      $("#image_carousel").animate({left: "-=375"}, 1000, function(){});
+          setTimeout(function() {
+            $("#image_carousel").animate({left: "-=375"}, 1000, function(){});
+                setTimeout(function() {
+                  $("#image_carousel").animate({left: "-=375"}, 1000, function(){});
+                }, 2000);
 
+          }, 2000);
 
-
-
-
+    }, 2000);
 
   });
+
+
+
+
+
+
 
 </script>
 

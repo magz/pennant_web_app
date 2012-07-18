@@ -8,9 +8,23 @@ module MainControllerHelpers
 
 	def parse_team_name
 
-
 	end
 
+	def get_overlay_images(team)
+		team ||= "as"
+		card_path = "iphone_overlay_cards/"
+		overlay_images = []
+
+		if team
+			overlay_images << card_path + team + "_memories.jpg"
+			overlay_images << card_path + team + "_futurecard.jpg"
+			overlay_images << card_path + team + "_sharecard.jpg"
+			overlay_images << card_path + team + "_titlecard.jpg"
+		end
+
+		overlay_images
+
+	end
 
 
 
