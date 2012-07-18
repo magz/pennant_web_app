@@ -43,7 +43,7 @@ html, body, div, span, iframe, wrap {
 	z-index: 250;
 }
 a#pennant_home_link {
-	font-family: 'HelveticaNeueLTStd75Bold';
+	font-family: 'HelveticaNeueLTStd-Bd';
 	font-size:15px;
 	text-decoration: none;
 	color:white;
@@ -53,7 +53,7 @@ a#pennant_home_link {
 	position: relative;
 }
 a#bunt_home_link {
-	font-family: 'HelveticaNeueLTStd75Bold';
+	font-family: 'HelveticaNeueLTStd-Bd';
 	font-size:15px;
 	text-decoration: none;
 	color:white;
@@ -170,7 +170,7 @@ a#bunt_home_link {
 	z-index: 320;
 }
 #topps_menu a {
-	font-family: 'HelveticaNeueLTStd75Bold';
+	font-family: 'HelveticaNeueLTStd-Bd';
 	font-size:15px;
 	text-decoration: none;
 	color:white;
@@ -186,7 +186,8 @@ body#pennant_home #pennant_link, body#bunt_home #bunt_link, body#pennant_terms #
 
 #popup_page {
 	color: black;
-	font-family: 'FuturaMedium';
+/*	font-family: "Puritan", sans-serif;
+*/	font-family: 'FuturaMedium';
 	font-size: 16px;
 	height: 690px;
 	left: 687px;
@@ -201,11 +202,13 @@ body#pennant_home #pennant_link, body#bunt_home #bunt_link, body#pennant_terms #
 }
 .about_red {
 	color: #7D090F;
+	font-weight: bold;	
 	font-family: 'FuturaMdBTBold';
 	font-size:16px;
 }
 .about_bold {
 	color: black;
+	font-weight: bold;
 	font-family: 'FuturaMdBTBold';
 }
 #popup_page ul {
@@ -295,6 +298,7 @@ body.player #topps_footer, body.team #topps_footer {
 	z-index: 240;
 }
 #every_team_text {
+	font-weight: bold;
 	font-family: 'FuturaMdBTBold';
 	font-size: 28px;
 	height: 72px;
@@ -396,8 +400,8 @@ body.player #topps_footer, body.team #topps_footer {
 	z-index: 150;
 }
 #quote_text {
-	font-family: 'Futuramedium';
-	font-size: 0.95em;
+/*	font-family: 'Futuramedium';
+*/	font-size: 0.95em;
 	height: 47px;
 	left: 161px;
 	letter-spacing: 0.024em;
@@ -437,8 +441,7 @@ body.player #topps_footer, body.team #topps_footer {
 	width: 698px;
 	height: 652px;
 	z-index: 40;
-/*	background:url(../graphics/iphone.png);
-*/	background-repeat:no-repeat;
+	background-repeat:no-repeat;
 }
 body.player #iphone, body.team #iphone {
 	top: 134px;
@@ -493,8 +496,8 @@ body.team #team-box {
 	left:0;
 }
 #team-text {
-	font-family: 'FuturaBook';
-	font-size: 16px;
+/*	font-family: 'FuturaBook';
+*/	font-size: 16px;
 	height: 100%;
 	left: 0;
 	line-height: 25px;
@@ -505,6 +508,7 @@ body.team #team-box {
 	z-index: 355;
 }
 #player-front, #player-back {
+	font-family: "Puritan", sans-serif;
 	font-family: 'FuturaMedium';
 }
 #player-front {
@@ -563,12 +567,14 @@ body.team #team-box {
 	transform: rotateY(-180deg);
 }
 .player-bold {
+	font-family: "Puritan", sans-serif;
+	font-weight: bold;
 	font-family:'FuturaMdBTBold';
 	font-size:18px;
 }
 .team-bold {
-	font-family: 'FuturaBook';
-	font-size: 18px;
+/*	font-family: 'FuturaBook';
+*/	font-size: 18px;
 	font-weight: bold;
 	padding-bottom:8px;
 }
@@ -580,6 +586,7 @@ body.team #team-box {
 }
 #everwonder {
 	color: black;
+	font-family: "Puritan", sans-serif;
 	font-family: 'FuturaMedium';
 	font-size: 26px;
 	height: 63px;
@@ -597,6 +604,8 @@ body.player #everwonder {
 
 .fut_bold_red {
 	color: #7D090F;
+	font-family: "Puritan", sans-serif;
+	font-weight: bold;
 	font-family: 'FuturaMdBTBold';
 	font-size: 26px;
 	letter-spacing: 0;
@@ -625,8 +634,8 @@ a {
 	overflow:auto;
 }
 #red_dot_bullet {
-/*	background: url("../graphics/red_dot.png") no-repeat scroll left top transparent;
-*/	float: left;
+	background: url("<%= asset_path "red_dot.png" %>") no-repeat scroll left top transparent;
+	float: left;
 	height: 6px;
 	position: relative;
 	top: 7px;
