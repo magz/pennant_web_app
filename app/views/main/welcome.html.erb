@@ -9,7 +9,7 @@
         
                 <div id="divider"   >
             <!-- <img src="http://pennant.topps.com/wp-content/themes/weaver-ii-pro/graphics/divider.png" alt="DIVIDER" class="pngimg" /> --></div>
-  		    <div id="video1_link"><%= link_to image_tag("watch_the_trailer_orange.png"), "http://player.vimeo.com/video/39739697?autoplay=1", class: "topps_video"%></div>
+  		    <div id="video1_link"><%= link_to image_tag("watch_the_trailer_orange.png"), "http://player.vimeo.com/video/39739697?autoplay=1", class: "topps_video" %></div>
           <div id="video2_link"><%= link_to (image_tag "watch_the_demo_orange.png"), "http://player.vimeo.com/video/39745318?autoplay=1", class: "topps_video" %></div>
 
           <div id="app_store_black" >
@@ -45,4 +45,81 @@
   </div>
 </div>
 
+<div id="about_layer"> 
+  
+  <!-- This is 'ABOUT_link' -->
+  <div id="about_open"> <%= link_to image_tag("about_link_open.png", width: "36", height: "58", alt: "ABOUT", class: "pngimg", border: "0"), "", id: "about_link_open" %></div>
+  <div id="about_close" >  <%= link_to image_tag("about_link_close.png", width: "36", height: "58", alt: "ABOUT", class: "pngimg", border: "0"), "", id: "about_link_close" %></div>
+</div>
+</div>
+
+
+
+
+
+<div id="popup_page" >
+  <div id="about_text">
+    <span class="about_red">WHAT IS TOPPS PENNANT?</span><br />
+    <br />
+    At Topps, we want to build great things for fans. That’s it. The driving passion behind our products is we build things that we ourselves want to use as fans.
+    <br />
+    <br />
+    <span class="about_bold">Topps Pennant is the modern box score.</span> We, as fans, wanted one place to check out scores from last night’s game as well as relive meaningful baseball moments from 30 years ago. So we acquired the app, added new features, and are excited to bring it to our fellow baseball fans.
+    <br /><br /> 
+    Topps Pennant captures all the teams, all the games, and all the plays from last night’s game back to 1952. That’s nearly 60 years’ worth of baseball data brought to life and presented in elegant, interactive infographics on the iPad and now on the iPhone.
+    <br /><br />
+    With Topps Pennant, you can:
+    <ul>
+    <li>
+    Check out what happened in last night’s game
+    </li>
+    <li>
+    Chart your favorite team's performance and how they stacked up in the league from 1952 to today
+    </li>
+    <li>Relive your favorite baseball memories such as your first game, the games played on the day you were born, the game when you met your favorite player, and more
+    </li>
+    <li>Debate and solve questions around key historical moments
+    </li>
+    </ul>
+    <br />
+    Please check out our <a href="http://vimeo.com/39739697" target="_new">videos</a> or our <a href="http://pennant.topps.com/help" target="_new" onClick="_gaq.push(['_trackEvent', 'Internal Nav', 'Support'])">product support page</a> for more detail.
+    <br /><br /> 
+    <span class="about_red"> 
+    HOW CAN I GET IT?
+    </span><br /> 
+    Topps Pennant is currently available in the Apple App Store for both iPhone and iPad. You can find the purchase link to the left. If you like the app, we encourage you to tell your friends. 
+  </div>
+</div> 
+<script>
+  $(document).ready(function() {
+    $("#about_link_open").click(function(e){
+      $("#about_open").hide();
+      $("#about_close").show();
+      $("#rightside").hide();
+      $("#popup_page").show();
+      e.preventDefault(); 
+
+      
+
+    });
+    $("#about_link_close").click(function(e){
+      $("#about_close").hide();
+      $("#about_open").show();
+      $("#popup_page").hide();
+      $("#rightside").show();
+
+      e.preventDefault(); 
+
+      
+
+    });
+
+
+
+
+
+
+  });
+
+</script>
 
